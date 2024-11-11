@@ -7,6 +7,6 @@ type User struct {
 	TeamID        uint
 	Name          string         `gorm:"unique"`
 	Email         string         `gorm:"unique"`
-	SlackID       string         `gorm:"unique"`
+	SlackID       *string        `gorm:"unique"`
 	Subscriptions []Subscription `gorm:"foreignKey:UserID"`
 }
